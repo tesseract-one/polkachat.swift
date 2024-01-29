@@ -19,11 +19,11 @@
 		65DD5C9229B116AA00FB7CBD /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DD5C9129B116AA00FB7CBD /* MessagesView.swift */; };
 		65DD5C9429B1199200FB7CBD /* UserControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DD5C9329B1199200FB7CBD /* UserControlsView.swift */; };
 		65DD5C9629B119A500FB7CBD /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DD5C9529B119A500FB7CBD /* SignInView.swift */; };
-		92611F1D2B0CF50A003AFE3F /* TesseractClient in Frameworks */ = {isa = PBXBuildFile; productRef = 92611F1C2B0CF50A003AFE3F /* TesseractClient */; };
 		92611F202B0CF583003AFE3F /* Substrate in Frameworks */ = {isa = PBXBuildFile; productRef = 92611F1F2B0CF583003AFE3F /* Substrate */; };
 		92611F222B0CF583003AFE3F /* SubstrateRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 92611F212B0CF583003AFE3F /* SubstrateRPC */; };
 		92611F242B0CF675003AFE3F /* TransportSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92611F232B0CF675003AFE3F /* TransportSelector.swift */; };
 		92611F282B0CFCA6003AFE3F /* TesseractSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92611F272B0CFCA6003AFE3F /* TesseractSigner.swift */; };
+		9278235B2B684E81002A95CC /* TesseractClient in Frameworks */ = {isa = PBXBuildFile; productRef = 9278235A2B684E81002A95CC /* TesseractClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,6 @@
 		65DD5C9129B116AA00FB7CBD /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		65DD5C9329B1199200FB7CBD /* UserControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserControlsView.swift; sourceTree = "<group>"; };
 		65DD5C9529B119A500FB7CBD /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		92611F1B2B0CF4FA003AFE3F /* Tesseract.swift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Tesseract.swift; path = ../Tesseract.swift; sourceTree = "<group>"; };
 		92611F232B0CF675003AFE3F /* TransportSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportSelector.swift; sourceTree = "<group>"; };
 		92611F272B0CFCA6003AFE3F /* TesseractSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesseractSigner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,8 +51,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				92611F202B0CF583003AFE3F /* Substrate in Frameworks */,
-				92611F1D2B0CF50A003AFE3F /* TesseractClient in Frameworks */,
 				92611F222B0CF583003AFE3F /* SubstrateRPC in Frameworks */,
+				9278235B2B684E81002A95CC /* TesseractClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +72,6 @@
 		659B4B41299D788B0029E731 = {
 			isa = PBXGroup;
 			children = (
-				92611F1A2B0CF4F9003AFE3F /* Packages */,
 				659B4B4C299D788B0029E731 /* PolkaChat */,
 				659B4B4B299D788B0029E731 /* Products */,
 				92D79B262AE3421700D22BDC /* Frameworks */,
@@ -124,14 +122,6 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		92611F1A2B0CF4F9003AFE3F /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				92611F1B2B0CF4FA003AFE3F /* Tesseract.swift */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		92D79B262AE3421700D22BDC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,9 +146,9 @@
 			);
 			name = PolkaChat;
 			packageProductDependencies = (
-				92611F1C2B0CF50A003AFE3F /* TesseractClient */,
 				92611F1F2B0CF583003AFE3F /* Substrate */,
 				92611F212B0CF583003AFE3F /* SubstrateRPC */,
+				9278235A2B684E81002A95CC /* TesseractClient */,
 			);
 			productName = PolkaChat;
 			productReference = 659B4B4A299D788B0029E731 /* PolkaChat.app */;
@@ -190,6 +180,7 @@
 			mainGroup = 659B4B41299D788B0029E731;
 			packageReferences = (
 				92611F1E2B0CF583003AFE3F /* XCRemoteSwiftPackageReference "Substrate" */,
+				927823592B684E81002A95CC /* XCRemoteSwiftPackageReference "Tesseract.swift" */,
 			);
 			productRefGroup = 659B4B4B299D788B0029E731 /* Products */;
 			projectDirPath = "";
@@ -439,13 +430,17 @@
 				minimumVersion = 0.1.0;
 			};
 		};
+		927823592B684E81002A95CC /* XCRemoteSwiftPackageReference "Tesseract.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tesseract-one/Tesseract.swift.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.5.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		92611F1C2B0CF50A003AFE3F /* TesseractClient */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TesseractClient;
-		};
 		92611F1F2B0CF583003AFE3F /* Substrate */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 92611F1E2B0CF583003AFE3F /* XCRemoteSwiftPackageReference "Substrate" */;
@@ -455,6 +450,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 92611F1E2B0CF583003AFE3F /* XCRemoteSwiftPackageReference "Substrate" */;
 			productName = SubstrateRPC;
+		};
+		9278235A2B684E81002A95CC /* TesseractClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 927823592B684E81002A95CC /* XCRemoteSwiftPackageReference "Tesseract.swift" */;
+			productName = TesseractClient;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
